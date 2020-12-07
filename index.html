@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Coding Quiz Challenge</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="col-6">
+                <a id="highScore" href="highscore.html">View Highscores</a>
+            </div>
+
+            <div class="col-6">
+                <p id="timeDisplay">Time: <span id="timer">0</span>
+                </p>
+            </div>
+        </div>
+
+    </header>
+    <div class="container" id="quizContent">
+        <!-- Main page introduction with start button -->
+        <div id="intro-container">
+            <h1>Coding Quiz Challenge</h1>
+            <br>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds</p>
+            <button id="startBtn" type="button" onclick="startQuiz();" class="btn">Start Quiz</button>
+        </div>
+        <!-- Quiz Page appear after clicking start button -->
+        <div id="question-container" class="hide">
+            <h2 id="question">Question</h2>
+            <div id="answer-buttons">
+                <button type="button" onclick="answerCheck(this.id)" id="answer1" class="btn"></button>
+                <button type="button" onclick="answerCheck(this.id)" id="answer2" class="btn"></button>
+                <button type="button" onclick="answerCheck(this.id)" id="answer3" class="btn"></button>
+                <button type="button" onclick="answerCheck(this.id)" id="answer4" class="btn"></button>
+                <hr>
+                <h3 id="result"></h3>
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
